@@ -1,4 +1,22 @@
 //app.js
+console.log('==================================================================')
+// 1.小程序不是运行在浏览器中，所以没有DOM 和 BOM 对象
+console.log(window)
+console.log(document)
+// 2.小程序中有一些额外的成员
+// App 方法，用于定义应用程序实例对象
+// Page 方法 用于定义页面对象
+// getApp 方法 用于获取全局应用程序对象
+// getCurrentPages 方法 用于获取当前页面的调用栈(数组最后一个就是当前页面)
+// wx 对象 用来提供核心API
+console.log(wx)
+// 3.小程序的JS是支持CommonJS规范的
+const foo = require('./utils/foo.js')
+foo.say('ww')
+
+console.log('==================================================================')
+
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,5 +53,11 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  fun: function () {
+    console.log('-------------------------------')
+    console.log('-------------------------------')
+    console.log('-------------------------------')
   }
 })
+console.log(123)

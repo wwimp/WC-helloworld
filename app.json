@@ -1,14 +1,57 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#ff0",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "navigationBarBackgroundColor": "#ffff00",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "微信小程序",
+    "backgroundColor": "#00ffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
   },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#219bf3",
+    "backgroundColor": "#ff0",
+    "borderStyle": "white",
+    "position":"bottom",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/home.png",
+      "selectedIconPath":"images/home-active.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "日志",
+      "iconPath":"images/message.png",
+      "selectedIconPath":"images/message-active.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "嘟嘟",
+      "iconPath":"images/icon_API.png",
+      "selectedIconPath":"images/icon_API_HL.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "更多",
+      "iconPath":"images/icon_component.png",
+      "selectedIconPath":"images/icon_component_HL.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "我的",
+      "iconPath":"images/profile.png",
+      "selectedIconPath":"images/profile-active.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ],
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

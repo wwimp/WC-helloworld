@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+<input/>
+<text>00000</text>
+</view>

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+	<!-- 基本的事件使用，就是通过给组件添加一个 "bind+事件名" 的属性， 属性的值指向一个定义在当前页面对象中的JS方法-->
+	<!-- <button bindtap="funtap">点我点我</button>
+  <text>------------------</text> -->
+
+	<!-- 事件冒泡 -->
+	<!-- <view bindtap="funout" style="width:300px; height:300px; background-color:skyblue">
+		<view bindtap="funin" style="width:150px; height:150px; background-color:yellowgreen; margin:75px">1</view>
+	</view> -->
+  <!-- 可以使用另一种事件绑定方式catchtap，它可以绑定事件并在事件执行过程中阻止冒泡 -->
+  <!-- <text>------------------</text>
+	<view bindtap="funout" style="width:300px; height:300px; background-color:skyblue">
+		<view catchtap="funin" style="width:150px; height:150px; background-color:yellowgreen; margin:75px">2</view>
+	</view> -->
+
+  <!-- 事件传参 -->
+	<button bindtap="funtap1" data-name="zs" data-age="18">点我点我</button>
+	<button bindtap="funtap2" data-na-me="ls">点我点我</button>
+  <!-- <input type="button" onclick="xxx()" data-id="xxx"/> -->
+  <!-- 
+    1.事件的基本使用：bind+xxx  catch+xxx
+    2.小程序中的事件冒泡跟HTML中的处理方法不一样，这里使用catch+xxx
+    3.如果需要给事件处理函数传参，只能通过dataset的方式（在元素上添加data-xxx,然后通过事件处理函数中的e.target.dataset拿到data属性）
+   -->
+</view>

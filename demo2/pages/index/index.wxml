@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<!-- 框架最大的特点就是让我们开发者必须按照特定的方式编写代码 -->
+<!-- 数据绑定
+1.数据在哪 （当前页面对象的data属性中）
+2.绑到哪去 （想绑定到哪就在那里用mustache   {{}}   语法输出）
+-->
+<view class="container">
+	<!-- 这种{{}}的语法叫做mustache 小胡子语法 -->
+	<text>{{ msg }}</text>
+	<text>{{ person.name }} --- {{ person.age }}</text>
+	<view class="{{ viewClassName }} world">呱呱呱</view>
+	<!-- 
+mustache语法可以用在：
+1.innerHTML(类似)
+2.元素的属性上
+不能用在标签名与属性名上，只能用在值的位置 
+-->
+	<!-- 
+3.可以直接使用字面量和简单的逻辑运算符
+'123' 1+1 
+三元运算符...
+ -->
+	<text>{{ 'hello' }}</text>
+	<text>{{ 123 }}</text>
+	<text>1 + 1 = {{ 1+1 }}</text>
+	<text>{{ '优秀' }}</text>
+	<text>{{ 100>50? 'yes' : 'no' }}</text>
+	<!-- 
+  4.当语法解析，误解了 true / false
+  可以用{{}} 来解决
+ -->
+	<checkbox checked="{{ false }}"></checkbox>
+	<checkbox checked="{{ true }}"></checkbox>
+	<text>----------------------------</text>
+
+	<view>
+		<!-- <view>
+   <checkbox></checkbox>
+   <text>JS</text>
+  </view>
+  <view>
+   <checkbox checked="{{ true }}"></checkbox>
+   <text>HTML</text>
+  </view>
+  <view>
+   <checkbox></checkbox>
+   <text>CSS</text>
+  </view> -->
+		<!-- <text>----------------------------</text>
+   <view wx:for="{{ todos }}">
+   <checkbox checked="{{ item.completed }}"></checkbox>
+   <text>{{ item.name }}</text>
+  </view> -->
+		<!-- 
+    1.明确页面中的循环体
+    2.删除多余的重复内容，只保留一个
+    3.在剩下的这个上加上wx:for属性，属性值等于要遍历的数据源，数据源是一个数组
+    4.在这个标签（循环体）内部使用item代表当前被遍历的元素
+    5.如果在全局属性中有item这种关键词（在全局中定义了item），那么这个全局的item在这里（循环体内部）是拿不到的
+    6.解决方法：可以通过给循环体标签加上"wx:for-item="字符串" 来解决"(起别名)
+    7.索引值默认是index，同样，如果有冲突的话，可以用wx:for-index="字符串" 来起别名，解决问题  
+-->
+		<view wx:for="{{ todos }}" wx:for-item="aaa" wx:for-index="i">
+			<text>{{ i }}</text>
+			<checkbox checked="{{ aaa.completed }}"></checkbox>
+			<text>{{ aaa.name }}</text>
+			<text>{{ item }}</text>
+		</view>
+		<text>----------------------------</text>
+		<view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+			<view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
+				<!-- wx:if是用来根据一个布尔值来决定显示或隐藏 -->
+				<view wx:if="{{ i <= j }}">
+					{{ i }} * {{ j }} = {{ i * j }}
+				</view>
+			</view>
+		</view>
+		<button bindtap="funtap">点我点我</button>
+	</view>
+</view>
+
+
+
+
+
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->

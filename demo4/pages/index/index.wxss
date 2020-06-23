@@ -19,3 +19,12 @@
 .usermotto {
   margin-top: 200px;
 }
+
+input {
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+text {
+  font-size: 22px;
+}

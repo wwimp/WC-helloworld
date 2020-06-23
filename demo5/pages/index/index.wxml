@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <image></image>
+  </view>
+  <view class="input">
+    <input placeholder="请输入用户名"></input>
+    <input placeholder="请输入密码"></input>
+  </view>
+  <view class="button">
+    <button>登录</button>
+    <button>注册</button>
+  </view>
+</view>

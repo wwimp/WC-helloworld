@@ -1,0 +1,32 @@
+/**index.wxss**/
+.header {
+  height: 150px;
+}
+
+image {
+  width: 80px;
+  height: 80px;
+  background-color: aqua;
+
+}
+
+.input {
+  height: 150px;
+}
+
+input {
+  width: 250px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  width: 250px;
+}
+
+button {
+  height: 50px;
+  width: 250px;
+  background-color: #ccc;
+}

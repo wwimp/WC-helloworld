@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<!-- <view class="container">
+	<view>
+		<view class="button" bindtap="btn">点击切换</view>
+	</view>
+	<view class="content" wx:if="{{ show }}">
+		<text>123
+    456
+    789
+    </text>
+	</view>
+</view> -->
+
+<!-- <view class="container">
+	<view>
+		<view class="button" bindtap="btn">点击切换</view>
+	</view>
+	<view class="content" wx:if="{{ show }}">
+		<text>123
+    456
+    789
+    </text>
+	</view>
+	<view class="content" wx:if="{{ show }}">
+		<text>123
+    456
+    789
+    </text>
+	</view>
+	<view class="content" wx:if="{{ show }}">
+		<text>123
+    456
+    789
+    </text>
+	</view>
+</view> -->
+
+<!-- <view class="container">
+	<view>
+		<view class="button" bindtap="btn">点击切换</view>
+	</view>
+	<block wx:if="{{ show }}">
+		<view class="content">
+			<text>123
+    456
+    789
+    </text>
+		</view>
+		<view class="content">
+			<text>123
+    456
+    789
+    </text>
+		</view>
+		<view class="content">
+			<text>123
+    456
+    789
+    </text>
+		</view>
+	</block>
+</view> -->
+
+<!-- block标签，相当于一个容器，常用于显示隐藏，循环等， 方便我们进行想同时控制多个元素的操作 它是控制属性（控制属性是wx:开头的）的载体，在渲染过程中没有实际意义 -->
+<!-- wx:if 与 hidden 都能控制显示与隐藏，区别：wx:if是值为false时，直接不渲染；hidden是设置了display为 none -->
+<!-- hidden只能用于实际具体的元素上，不能用在block上 -->
+<view class="container">
+	<view>
+		<view class="button" bindtap="btn">点击切换</view>
+	</view>
+	<view class="content" wx:if="{{ show }}">
+		<text>123
+    456
+    789
+    </text>
+	</view>
+	<view class="content" hidden="{{ !show }}">
+		<text>123
+    456
+    789
+    </text>
+	</view>
+</view>

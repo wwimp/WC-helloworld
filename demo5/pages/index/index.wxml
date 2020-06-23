@@ -1,14 +1,30 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="header">
-    <image></image>
-  </view>
-  <view class="input">
-    <input placeholder="请输入用户名"></input>
-    <input placeholder="请输入密码"></input>
-  </view>
-  <view class="button">
-    <button>登录</button>
-    <button>注册</button>
-  </view>
-</view>
+<!-- <view class="container">
+	<view class="header">
+		<view class="image">M</view>
+	</view>
+	<view class="inputs">
+		<input type="text" placeholder="请输入用户名" value="{{ username }}" bindinput="inputChangeHandle" data-prop="username"></input>
+		<input type="password" placeholder="请输入密码" value="{{ password }}" bindinput="inputChangeHandle" data-prop="password"></input>
+	</view>
+	<view class="button">
+		<button type="primary" bindtap="loginHandle">登录</button>
+		<button type="default">注册</button>
+	</view>
+</view> -->
+
+<form bindsubmit="loginHandle">
+	<view class="container">
+		<view class="header">
+			<view class="image">M</view>
+		</view>
+		<view class="inputs">
+			<input type="text" name="username" placeholder="请输入用户名" value="{{ username }}"></input>
+			<input type="password" name="password" placeholder="请输入密码" value="{{ password }}"></input>
+		</view>
+		<view class="button">
+			<button type="primary" form-type="submit">登录</button>
+			<button type="default">注册</button>
+		</view>
+	</view>
+</form>

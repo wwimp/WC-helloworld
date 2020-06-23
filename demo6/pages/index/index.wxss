@@ -1,0 +1,13 @@
+.button{
+  border: 1px solid #ccc;
+  width: 150px;
+  text-align: center;
+}
+.content{
+  display: block;
+  width: 150px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #ccc;
+  margin-top: 2px;
+}

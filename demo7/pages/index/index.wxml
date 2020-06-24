@@ -1,13 +1,45 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+	<!-- 
+  icon的类型，有效值：success, success_no_circle, info, warn, waiting, cancel, download, search, clear
+  type用于定义图表类型，只能是规定范围内的类型，除了这些内置的图标，其他图标必须图片的方式使用
+  size用于设置图标的大小，默认为23，单位是px
+  color用于设置图标的颜色（取值就是css颜色取值）
+ -->
+	<icon type="success" size="60" color="blue"></icon>
+	<icon type="success" size="40"></icon>
+	<icon type="success"></icon>
+	<icon type="success_no_circle"></icon>
+	<icon type="info"></icon>
+	<icon type="warn"></icon>
+	<icon type="waiting"></icon>
+	<icon type="cancel"></icon>
+	<icon type="download"></icon>
+	<icon type="search"></icon>
+	<icon type="clear"></icon>
+  <!-- 
+    text 类似于HTML中的p标签，与p标签的一些不同，可以嵌套，可以换行
+   -->
+   <!-- 
+     text的使用为了更好的控制页面上的内容
+    -->
+   123000321
+   -------------
+   不包裹不会换行
+   <text>123<text>000</text>321</text>
+   -------------
+   <text>123
+   包裹会换行
+   321</text>
+   <!-- 
+     progress 显示一个进度条
+     percent 进度条进度百分比
+     show-info 显示百分比信息
+     active 进度条动画
+    -->
+    <progress></progress>
+    <progress percent="50"></progress>
+    <progress percent="50" show-info></progress>
+    <progress percent="50" show-info active></progress>
+    <progress percent="50" active></progress>
 </view>

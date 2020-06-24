@@ -1,13 +1,23 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 
+  type 设置样式，只有三种
+  size 设置大小，只有两种
+  plain 设置幽灵按钮
+  disabled 设置禁用
+  loading 设置加载图标
+  form-type 设置按钮点击功能，submit 与 reset
+  hover-class 设置按下后的样式
+ -->
+  <button type="primary">按钮</button>
+  <button type="default">按钮</button>
+  <button type="warn">按钮</button>
+  <button type="primary" size="default">按钮</button>
+  <button type="primary" size="mini">按钮</button>
+  <button type="primary" plain>按钮</button>
+  <button type="primary" disabled>按钮</button>
+  <button type="primary" loading>按钮</button>
+  <button type="primary" form-type="submit">按钮</button>
+  <button type="primary" form-type="reset">按钮</button>
+  <button hover-class="btn-active">按钮</button>
 </view>

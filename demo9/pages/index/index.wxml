@@ -1,13 +1,105 @@
-<!--index.wxml-->
+<!-- -----------------button--------------------- -->
+<!-- <view class="page-body">
+  <view class="btn-area" id="buttonContainer">
+    <button type="primary">Normal</button>
+    <button type="primary" loading="true">Loading</button>
+    <button type="primary" disabled="true">Disabled</button>
+
+    <button type="default">Normal</button>
+    <button type="default" disabled="true">Disabled</button>
+
+    <button type="warn">Normal</button>
+    <button type="warn" disabled="true">Disabled</button>
+
+    <view class="button-sp-area">
+      <button type="primary" plain="true">按钮</button>
+      <button type="primary" disabled="true" plain="true">不可点击的按钮</button>
+
+      <button type="default" plain="true">按钮</button>
+      <button type="default" disabled="true" plain="true">按钮</button>
+
+      <button class="mini-btn" type="primary" size="mini">按钮</button>
+      <button class="mini-btn" type="default" size="mini">按钮</button>
+      <button class="mini-btn" type="warn" size="mini">按钮</button>
+    </view>
+  </view>
+</view> -->
+
+<!-- -----------------checkbox--------------------- -->
+<!-- <view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">默认样式</view>
+      <label class="checkbox">
+        <checkbox value="cb" checked="true"/>选中
+      </label>
+      <label class="checkbox">
+        <checkbox value="cb" />未选中
+      </label>
+    </view>
+  
+    <view class="page-section">
+      <view class="page-section-title">推荐展示样式</view>
+      <view class="weui-cells weui-cells_after-title">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+            <view class="weui-cell__hd">
+              <checkbox value="{{item.value}}" checked="{{item.checked}}"/>
+            </view>
+            <view class="weui-cell__bd">{{item.name}}</view>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+<!-- -----------------form--------------------- -->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">switch</view>
+        <switch name="switch"/>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">radio</view>
+        <radio-group name="radio">
+          <label><radio value="radio1"/>选项一</label>
+          <label><radio value="radio2"/>选项二</label>
+        </radio-group>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">checkbox</view>
+        <checkbox-group name="checkbox">
+          <label><checkbox value="checkbox1"/>选项一</label>
+          <label><checkbox value="checkbox2"/>选项二</label>
+        </checkbox-group>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">slider</view>
+        <slider value="50" name="slider" show-value ></slider>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">input</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input" name="input" placeholder="这是一个输入框" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+        <button style="margin: 30rpx 0" formType="reset">Reset</button>
+      </view>
+    </form>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
 </view>

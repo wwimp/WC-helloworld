@@ -1,35 +1,101 @@
 <!--  -->
 <view class="root">
-  <!-- 标签栏区域 固定高度 -->
-  <view class="tabs">
-    <view class="item active">
-      <text>推荐</text>
-    </view>
-    <view class="item">
-      <text>歌单</text>
-    </view>
-    <view class="item">
-      <text>电台</text>
-    </view>
-    <view class="item">
-      <text>排行</text>
-    </view>
-  </view>
-  <!-- 内容区域 自适应高度 -->
-  <view class="content"></view>
-  <!-- 播放控制 固定高度 -->
-  <view class="player">
-    <view class="poster">
-      <image src="../../images/poster.jpg"></image>
-    </view>
-    <view class="info">
-      <text class="title">修炼爱情</text>
-      <text class="artist">林俊杰</text>
-    </view>
-    <view class="controls">
-      <image src="../../images/01.png"></image>
-      <image src="../../images/02.png"></image>
-      <image src="../../images/03.png"></image>
-    </view>
-   </view>
+	<!-- 标签栏区域 固定高度 -->
+	<view class="tabs">
+		<view class="item active">
+			<text>推荐</text>
+		</view>
+		<view class="item">
+			<text>歌单</text>
+		</view>
+		<view class="item">
+			<text>电台</text>
+		</view>
+		<view class="item">
+			<text>排行</text>
+		</view>
+	</view>
+	<!-- 内容区域 自适应高度 -->
+	<scroll-view class="content" scroll-y>
+		<swiper class="slide">
+			<swiper-item class="item">
+				<image src="../../images/slide.png"></image>
+			</swiper-item>
+			<swiper-item class="item">
+				<image src="../../images/slide.png"></image>
+			</swiper-item>
+			<swiper-item class="item">
+				<image src="../../images/slide.png"></image>
+			</swiper-item>
+		</swiper>
+
+		<!-- <view class="slide">
+			<image src="../../images/slide.png"></image>
+		</view> -->
+
+		<view class="portals">
+			<view class="item">
+				<image src="../../images/04.png"></image>
+				<text>私人FM</text>
+			</view>
+			<view class="item">
+				<image src="../../images/05.png"></image>
+				<text>今日推荐</text>
+			</view>
+			<view class="item">
+				<image src="../../images/06.png"></image>
+				<text>新歌榜</text>
+			</view>
+		</view>
+		<view class="list">
+			<view class="title">
+				<text>推荐歌单</text>
+			</view>
+			<view class="inner">
+				<view class="item">
+					<image src="../../images/poster0.jpg"></image>
+					<text>修炼爱情</text>
+				</view>
+				<view class="item">
+					<image src="../../images/poster0.jpg"></image>
+					<text>修炼爱情</text>
+				</view>
+				<view class="item">
+					<image src="../../images/poster0.jpg"></image>
+					<text>修炼爱情</text>
+				</view>
+				<view class="item">
+					<image src="../../images/poster0.jpg"></image>
+					<text>修炼爱情</text>
+				</view>
+				<view class="item">
+					<image src="../../images/poster0.jpg"></image>
+					<text>修炼爱情</text>
+				</view>
+				<view class="item">
+					<image src="../../images/poster0.jpg"></image>
+					<text>修炼爱情</text>
+				</view>
+				<view class="item">
+					<image src="../../images/poster0.jpg"></image>
+					<text>修炼爱情</text>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<!-- 播放控制 固定高度 -->
+	<view class="player">
+		<view class="poster">
+			<image src="../../images/poster0.jpg"></image>
+		</view>
+		<view class="info">
+			<text class="title">修炼爱情</text>
+			<text class="artist">林俊杰</text>
+		</view>
+		<view class="controls">
+			<image src="../../images/01.png"></image>
+			<image src="../../images/02.png"></image>
+			<image src="../../images/03.png"></image>
+		</view>
+	</view>
 </view>

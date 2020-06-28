@@ -30,12 +30,77 @@
 
   .content {
     flex: 1;
-    background-color: #ff0;
+    background-color: #000;
+    color: #ccc;
+    overflow: hidden;
   }
+
+  .slide .item {
+    width: 100%;
+    height: 130px;
+  }
+
+  .slide .item image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portals {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .portals .item {
+    flex: 1;
+  }
+
+  .portals .item image {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .portals .item text {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+  }
+
+  .list {
+    color: #ccc;
+  }
+
+  .list .title {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  .list .inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list .inner .item {
+    width: 33.33333333333%;
+  }
+
+  .list .inner .item image {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .list .inner .item text {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
 
   .player {
     display: flex;
-    height: 50px;
+    /* height: 50px; */
     background-color: #111;
 
   }

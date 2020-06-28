@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#111",
+  "navigationBarTitleText": "Music Player",
+  "navigationBarTextStyle": "white"
 }

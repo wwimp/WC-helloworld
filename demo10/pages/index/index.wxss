@@ -1,0 +1,70 @@
+  page {
+    height: 100%;
+  }
+
+  .root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ccc;
+  }
+
+  .tabs {
+    background-color: #f0e;
+    display: flex;
+  }
+
+  .tabs .item {
+    flex: 1;
+    text-align: center;
+    background-color: #000;
+    color: #ccc;
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .tabs .item.active {
+    color: #fff;
+    border-bottom: 2px solid #e9232c;
+  }
+
+  .content {
+    flex: 1;
+    background-color: #ff0;
+  }
+
+  .player {
+    display: flex;
+    height: 50px;
+    background-color: #111;
+
+  }
+
+  .poster image {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .info {
+    flex: 1;
+    color: #999;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  .info .title {
+    display: block;
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  .info .artist {
+    font-size: 13px;
+  }
+
+  .controls image {
+    width: 40px;
+    height: 40px;
+    margin: 5px 2px;
+  }

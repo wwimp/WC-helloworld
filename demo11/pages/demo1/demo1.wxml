@@ -1,2 +1,15 @@
 <!--pages/demo1/demo1.wxml-->
-<text>pages/demo1/demo1.wxml</text>
+<text>demol</text>
+<navigator url="../demo2/demo2">跳转到新页面</navigator>
+<navigator url="../demo2/demo2?name=001">001</navigator>
+<navigator url="../demo2/demo2?name=002&age=18">002</navigator>
+
+<navigator url="../demo2/demo2" redirect>跳转到新页面，不返回</navigator>
+
+<navigator hover-class="my-hover">点击</navigator>
+<navigator hover-class="none">点击</navigator>
+
+<image class="hover-demo" src="../../images/poster0.jpg"></image>
+
+<button type="primary" bindtap="tapHandle1">按钮1</button>
+<button type="primary" catchtap="tapHandle2">按钮2</button>

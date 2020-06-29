@@ -1,1 +1,7 @@
 /* pages/demo1/demo1.wxss */
+.my-hover{
+  color: red;
+}
+.hover-demo{
+  cursor: pointer;
+}

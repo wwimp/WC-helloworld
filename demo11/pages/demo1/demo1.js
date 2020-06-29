@@ -1,6 +1,29 @@
 // pages/demo1/demo1.js
 Page({
-
+  tapHandle1:function(){
+    // console.log(123)
+    wx.navigateTo({
+      url: '../demo2/demo2',
+      success:function(){
+        console.log("ok")
+      },
+      fail:function(){
+        console.log("no")
+      },
+      complete:function(){
+        console.log(123)
+      }
+    })
+    // wx.redirectTo({
+    //   url: '../demo2/demo2',
+    // })
+  },
+  tapHandle2:function(){
+    // console.log(123)
+    wx.redirectTo({
+      url: '../demo2/demo2',
+    })
+  },
   /**
    * 页面的初始数据
    */

@@ -1,0 +1,4 @@
+<!--pages/demo3/demo3.wxml-->
+<text>demo3</text>
+<navigator url="../demo1/demo1">跳转到新页面</navigator>
+<button type="default" bindtap="tap">返回</button>

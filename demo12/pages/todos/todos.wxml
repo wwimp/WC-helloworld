@@ -1,0 +1,29 @@
+<!-- pages/todos/todos.wxml -->
+<view class="container">
+    <view class="search">
+        <image src="../../images/plus1.png" />
+        <input type="text" placeholder="Add something" />
+    </view>
+    <view class="todos">
+        <view class="item">
+            <icon type="success"></icon>
+            <text class="">HTML</text>
+            <icon type="clear"></icon>
+        </view>
+        <view class="item">
+            <icon type="success"></icon>
+            <text class="">CSS</text>
+            <icon type="clear"></icon>
+        </view>
+        <view class="item">
+            <icon type="success"></icon>
+            <text class="">JS</text>
+            <icon type="clear"></icon>
+        </view>
+    </view>
+    <view class="footer">
+        <text>Toggle all</text>
+        <text>2 item left</text>
+        <text>Clear complete</text>
+    </view>
+</view>

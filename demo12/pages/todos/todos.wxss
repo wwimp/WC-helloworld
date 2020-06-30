@@ -1,4 +1,52 @@
 /* pages/todos/todos.wxss */
 .container{
-    border-top: 1px solid #e0e0e0;
+    border-top: 1rpx solid #e0e0e0;
+}
+.search{
+    display: flex;
+    align-items: center;
+    border: 1rpx solid #e0e0e0;
+    margin: 20rpx;
+    padding: 20rpx;
+    border-radius: 5rpx;
+    box-shadow: 0 0 5rpx #e0e0e0;
+    color: #888;
+}
+.search image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    margin-left: 10rpx;
+}
+.todos{
+    border: 1rpx solid #e0e0e0;
+    margin: 20rpx;
+    border-radius: 5rpx;
+    box-shadow: 0 0 5rpx #e0e0e0;
+}
+.todos .item {
+    display: flex;
+    align-items: center;
+    padding: 20rpx;
+    border-bottom: 1rpx solid #e0e0e0;
+}
+.todos .item:last-child{
+    border-bottom: 0;
+}
+.todos .item text{
+    flex: 1;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    color: #444;
+}
+.todos .item.completed text{
+    color: #888;
+    text-decoration: line-through;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin: 20rpx;
+    font-size: 26rpx;
+    color: #333;
 }

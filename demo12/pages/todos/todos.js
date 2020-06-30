@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    search: 'Add something',
+    todos: [
+      { name: 'HTML', completed: false },
+      { name: 'CSS', completed: true },
+      { name: 'JS', completed: false },
+    ]
   },
 
   /**

@@ -1,5 +1,5 @@
 Page({
-  data:{
+  data: {
     logs: []
   },
   onShow: function () {

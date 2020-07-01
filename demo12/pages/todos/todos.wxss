@@ -45,8 +45,9 @@
 }
 .footer{
     display: flex;
-    justify-content: space-around;
-    margin: 20rpx;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    margin: 30rpx;
     font-size: 26rpx;
     color: #333;
 }

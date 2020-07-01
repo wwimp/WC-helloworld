@@ -11,9 +11,10 @@ Page({
       { name: 'CSS', completed: false },
       { name: 'JS', completed: false },
     ],
-    leftCount: 2
+    leftCount: 2,
+    allCompleted: false
   },
-  addHandle: function () {
+  addTodoHandle: function () {
     if (!this.data.input) return
     var todos = this.data.todos
     todos.push({ name: this.data.input, completed: false })
@@ -41,7 +42,47 @@ Page({
   },
   removeTodoHandle(e) {
     var todos = this.data.todos
-    todos.splice(e.currentTarget.dataset.index, 1)
+    var item = todos.splice(e.currentTarget.dataset.index, 1)[0]
+    var leftCount = this.data.leftCount + (item.completed ? 0 : -1)
+    this.setData({
+      todos: todos,
+      leftCount: leftCount
+    })
+  },
+  toggleAllHandle() {
+    // console.log(123)
+    this.data.allCompleted = !this.data.allCompleted
+    var todos = this.data.todos
+    // for (let index = 0; index < todos.length; index++) {
+    //   const element = todos[index];
+    //   element.completed = this.data.allCompleted
+    // }
+    var that = this
+    todos.forEach(function (item) {
+      item.completed = that.data.allCompleted
+    })
+    // if (!this.data.allCompleted) {
+    //   var leftCount = this.data.todos.length
+    // } else {
+    //   var leftCount = 0
+    // }
+    var leftCount = this.data.allCompleted ? 0 : this.data.todos.length
+    this.setData({
+      todos: todos,
+      leftCount: leftCount
+    })
+  },
+  clearHandle() {
+    console.log(123)
+    // var todos = []
+    // this.data.todos.forEach(function (item) {
+    //   if (!item.completed) {
+    //     todos.push(item)
+    //   }
+    // })
+    var todos = this.data.todos.filter(function (item) {
+      return !item.completed
+    })
     this.setData({
       todos: todos
     })

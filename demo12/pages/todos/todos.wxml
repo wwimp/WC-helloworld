@@ -1,17 +1,18 @@
 <!-- pages/todos/todos.wxml -->
 <view class="container">
 	<view class="input">
-		<image src="../../images/plus1.png" bindtap="addHandle" />
+		<image src="../../images/plus1.png" bindtap="addTodoHandle" />
 		<!-- <input type="text" placeholder="Add" value="{{ search }}" /> -->
-		<input type="text" placeholder="Add something..." value="{{ input }}" bindinput="inputChangeHandle" />
+		<input type="text" placeholder="Add something..." value="{{ input }}" bindinput="inputChangeHandle" bindconfirm="addTodoHandle" />
 	</view>
-	<view class="todos">
-		<view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
-			<icon type="{{ item.completed ? 'success' : 'circle' }}"></icon>
-			<text class="">{{ item.name }}</text>
-			<icon type="clear" size="20" catchtap="removeTodoHandle" data-index="{{ index }}"></icon>
-		</view>
-		<!-- <view class="item">
+	<block wx:if="{{ todos.length }}">
+		<view class="todos">
+			<view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="{{ index }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
+				<icon type="{{ item.completed ? 'success' : 'circle' }}"></icon>
+				<text class="">{{ item.name }}</text>
+				<icon type="clear" size="20" catchtap="removeTodoHandle" data-index="{{ index }}"></icon>
+			</view>
+			<!-- <view class="item">
             <icon type="success"></icon>
             <text class="">HTML</text>
             <icon type="clear" size="20"></icon>
@@ -26,11 +27,16 @@
             <text class="">JS</text>
             <icon type="clear" size="20"></icon>
         </view> -->
-	</view>
-	<view class="footer">
-		<text>Toggle all</text>
-		<!-- <text>{{ leftCount }} {{ leftCount > 1 ? 'items' : 'item' }} left</text> -->
-		<text wx:if="{{ leftCount }}">{{ leftCount }} item{{ leftCount > 1 ? 's' : '' }} left</text>
-		<text>Clear complete</text>
+		</view>
+		<view class="footer">
+			<text bindtap="toggleAllHandle">Toggle all</text>
+			<!-- <text>{{ leftCount }} {{ leftCount > 1 ? 'items' : 'item' }} left</text> -->
+			<text wx:if="{{ leftCount }}">{{ leftCount }} item{{ leftCount > 1 ? 's' : '' }} left</text>
+			<!-- <text wx:if="{{ leftCount > 0 }}">{{ leftCount }} item{{ leftCount > 1 ? 's' : '' }} left</text> -->
+			<text bindtap="clearHandle">Clear complete</text>
+		</view>
+	</block>
+	<view wx:else>
+		<text>123</text>
 	</view>
 </view>

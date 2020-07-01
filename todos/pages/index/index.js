@@ -100,7 +100,7 @@ Page({
     })
     this.save()
   },
-  
+
   clearCompletedHandle: function (e) {
     var todos = this.data.todos
     var remains = []

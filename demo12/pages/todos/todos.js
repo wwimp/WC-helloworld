@@ -5,12 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    search: 'Add something',
+    input: '',
     todos: [
-      { name: 'HTML', completed: false },
-      { name: 'CSS', completed: true },
+      { name: 'HTML', completed: true },
+      { name: 'CSS', completed: false },
       { name: 'JS', completed: false },
-    ]
+    ],
+    leftCount: 2
+  },
+  addHandle: function () {
+    if (!this.data.input) return
+    var todos = this.data.todos
+    todos.push({ name: this.data.input, completed: false })
+    this.setData({
+      todos: todos,
+      input: '',
+      leftCount: this.data.leftCount + 1
+    })
+  },
+  inputChangeHandle: function (e) {
+    this.setData({
+      input: e.detail.value
+    })
+  },
+  toggleTodoHandle: function (e) {
+    // console.log(e.currentTarget)
+    // this.data.todos[e.currentTarget.dataset.index].completed = !this.data.todos[e.currentTarget.dataset.index].completed
+    var item = this.data.todos[e.currentTarget.dataset.index]
+    item.completed = !item.completed
+    var leftCount = this.data.leftCount + (item.completed ? -1 : 1)
+    this.setData({
+      todos: this.data.todos,
+      leftCount: leftCount
+    })
+  },
+  removeTodoHandle(e) {
+    var todos = this.data.todos
+    todos.splice(e.currentTarget.dataset.index, 1)
+    this.setData({
+      todos: todos
+    })
   },
 
   /**

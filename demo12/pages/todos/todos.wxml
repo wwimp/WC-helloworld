@@ -1,15 +1,15 @@
 <!-- pages/todos/todos.wxml -->
 <view class="container">
-	<view class="search">
-		<image src="../../images/plus1.png" />
+	<view class="input">
+		<image src="../../images/plus1.png" bindtap="addHandle" />
 		<!-- <input type="text" placeholder="Add" value="{{ search }}" /> -->
-		<input type="text" placeholder="{{ search }}" />
+		<input type="text" placeholder="Add something..." value="{{ input }}" bindinput="inputChangeHandle" />
 	</view>
 	<view class="todos">
-		<view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}">
+		<view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
 			<icon type="{{ item.completed ? 'success' : 'circle' }}"></icon>
 			<text class="">{{ item.name }}</text>
-			<icon type="clear" size="20"></icon>
+			<icon type="clear" size="20" catchtap="removeTodoHandle" data-index="{{ index }}"></icon>
 		</view>
 		<!-- <view class="item">
             <icon type="success"></icon>
@@ -29,7 +29,8 @@
 	</view>
 	<view class="footer">
 		<text>Toggle all</text>
-		<text>{{ todos.length }} item left</text>
+		<!-- <text>{{ leftCount }} {{ leftCount > 1 ? 'items' : 'item' }} left</text> -->
+		<text wx:if="{{ leftCount }}">{{ leftCount }} item{{ leftCount > 1 ? 's' : '' }} left</text>
 		<text>Clear complete</text>
 	</view>
 </view>

@@ -2,7 +2,7 @@
 .container{
     border-top: 1rpx solid #e0e0e0;
 }
-.search{
+.input{
     display: flex;
     align-items: center;
     border: 1rpx solid #e0e0e0;
@@ -12,7 +12,7 @@
     box-shadow: 0 0 5rpx #e0e0e0;
     color: #888;
 }
-.search image{
+.input image{
     width: 40rpx;
     height: 40rpx;
     margin-right: 20rpx;

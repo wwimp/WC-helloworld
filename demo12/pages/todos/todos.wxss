@@ -13,7 +13,9 @@
     box-shadow: 0 0 5rpx #e0e0e0;
     color: #888;
 }
-
+.input input{
+    flex: 1;
+}
 .input image {
     width: 40rpx;
     height: 40rpx;

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    category: {},
+    shops: []
   },
 
   /**
@@ -13,13 +14,23 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
+    this.setData({
+      category:options
+    })
+    wx.setNavigationBarTitle({
+      title: options.title,
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    if(this.data.category.title){
+      wx.setNavigationBarTitle({
+        title: this.data.category.title,
+      })
+    }
   },
 
   /**

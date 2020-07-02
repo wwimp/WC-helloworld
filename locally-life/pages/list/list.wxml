@@ -1,2 +1,167 @@
-<!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="container">
+	<view class="search">
+		<input placeholder="请输入"></input>
+		<icon type="search" size="18"></icon>
+	</view>
+	<view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="list">
+				<image src="/assets/images/banner-01.png"></image>
+				<view class="desc">
+					<text>叽里呱啦叽里呱啦</text>
+					<text>电话：1231231231</text>
+					<text>地址：确认乔沃维奇第三方权威</text>
+					<text>营业时间：驱蚊器恶气12133</text>
+				</view>
+				<view class="score">
+					<text>100</text>
+				</view>
+			</view>
+		</view>
+
+	</view>
+	<view class="more">
+		<icon type="success" size="18"></icon>
+		<text>加载更多</text>
+	</view>
+</view>

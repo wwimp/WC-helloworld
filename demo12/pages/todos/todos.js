@@ -73,7 +73,7 @@ Page({
     })
   },
   clearHandle() {
-    console.log(123)
+    // console.log(123)
     // var todos = []
     // this.data.todos.forEach(function (item) {
     //   if (!item.completed) {
@@ -144,3 +144,4 @@ Page({
 
   }
 })
+

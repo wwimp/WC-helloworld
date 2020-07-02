@@ -37,6 +37,9 @@
 		</view>
 	</block>
 	<view wx:else>
-		<text>123</text>
+		<view class="empty">
+			<text class="title">Great!</text>
+			<text class="content">There's no work.</text>
+		</view>
 	</view>
 </view>

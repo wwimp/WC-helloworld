@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 当前加载的分类
     category: {},
+    // 此分类下的所有商店
     shops: []
   },
 
@@ -15,10 +17,10 @@ Page({
   onLoad: function (options) {
     console.log(options)
     this.setData({
-      category:options
+      category: options
     })
     wx.setNavigationBarTitle({
-      title: options.title,
+      title: options.name,
     })
   },
 
@@ -26,9 +28,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    if(this.data.category.title){
+    if (this.data.category.name) {
       wx.setNavigationBarTitle({
-        title: this.data.category.title,
+        title: this.data.category.name,
       })
     }
   },
@@ -58,14 +60,17 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    console.log(123)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    console.log(123)
+    wx.stopPullDownRefresh({
+      success: (res) => {},
+    })
   },
 
   /**

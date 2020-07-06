@@ -4,12 +4,13 @@
     "pages/message/message",
     "pages/profile/profile",
     "pages/contact/contact",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/settings/settings"
   ],
   "window": {
     "navigationBarBackgroundColor": "#3a4861",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "本地生活",
+    "navigationBarTitleText": "首页",
     "backgroundColor": "#bcc0c9",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false

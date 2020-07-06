@@ -1,1 +1,9 @@
-<text>contact</text>
+
+<view>
+  <text class="item">123</text>
+  <text class="item">123</text>
+  <text class="item">123</text>
+  <text class="item">123</text>
+  <text class="item">123</text>
+  <text class="item">123</text>
+</view>

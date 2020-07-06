@@ -5,7 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: [{
+        id: 1,
+        text: '点一下试试？'
+      },
+      {
+        id: 2,
+        text: '再点一下试试？'
+      },
+      {
+        id: 3,
+        text: '再再再点一下？？？'
+      }
+    ]
+  },
+  clickHandle() {
+    wx.showToast({
+      title: '这是凑数的，老铁',
+      icon: 'none'
+    })
   },
 
   /**

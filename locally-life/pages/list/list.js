@@ -8,7 +8,8 @@ Page({
     // 当前加载的分类
     category: {},
     // 此分类下的所有商店
-    shops: []
+    shops: [],
+    hasMore: true
   },
 
   /**

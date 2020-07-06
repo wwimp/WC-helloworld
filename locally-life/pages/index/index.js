@@ -45,6 +45,12 @@ Page({
       "name": "装修"
     }]
   },
+  clickHandle() {
+    wx.showToast({
+      title: '这是凑数的，老铁',
+      icon: 'none'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

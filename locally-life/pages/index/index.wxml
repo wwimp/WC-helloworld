@@ -1,7 +1,7 @@
 <swiper class="slides" autoplay interval="3000" circular easing-function="easeInOutCubic" indicator-dots indicator-color="#fff" indicator-active-color="#ccc">
 	<swiper-item wx:for="{{ slides }}" wx:key="index">
 		<navigator>
-		<!-- <navigator wx:if="{{ item.link }}" url="{{ item.link }}"> -->
+			<!-- <navigator wx:if="{{ item.link }}" url="{{ item.link }}"> -->
 			<image src="{{ item }}" mode="aspectFill" />
 		</navigator>
 	</swiper-item>
@@ -13,6 +13,6 @@
 	</navigator>
 </view>
 <view class="links">
-	<image src="/assets/images/link-01.png" />
-	<image src="/assets/images/link-02.png" />
+	<image bindtap="clickHandle" src="/assets/images/link-01.png" />
+	<image bindtap="clickHandle" src="/assets/images/link-02.png" />
 </view>
